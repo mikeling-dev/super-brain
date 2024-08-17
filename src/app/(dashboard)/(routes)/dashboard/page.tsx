@@ -1,10 +1,9 @@
 import Header from "@/components/landing-page/header";
 
-export default function Home() {
+export default function DashboardPage() {
   return (
     <main className="flex min-h-screen flex-col items-center gap-20 p-24">
-      <Header />
-      <div className="">Landing Page</div>
+      <div className=" ">Dashboard</div>
     </main>
   );
 }
