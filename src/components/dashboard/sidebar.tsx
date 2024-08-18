@@ -13,6 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 const routes = [
   {
@@ -53,15 +54,24 @@ const routes = [
 ];
 
 export default function Sidebar() {
+  const pathname = usePathname();
   return (
     <div className="space-y-4 py-4 flex flex-col h-full">
       {routes.map((route) => (
         <Link
           href={route.href}
           key={route.href}
-          className="w-full flex justify-start"
+          className={cn("w-full flex justify-start")}
         >
-          <Button className={cn("w-full flex justify-start ")} variant="ghost">
+          <Button
+            className={cn(
+              "w-full flex justify-start text-muted-foreground",
+              pathname === route.href
+                ? "bg-accent text-accent-foreground"
+                : null
+            )}
+            variant="ghost"
+          >
             <route.icon className="h-5 w-5 mr-3" />
             {route.label}
           </Button>
