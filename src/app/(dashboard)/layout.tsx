@@ -1,4 +1,6 @@
+import Sidebar from "@/components/dashboard/sidebar";
 import Navbar from "@/components/navbar";
+
 import Link from "next/link";
 import React from "react";
 
@@ -13,6 +15,7 @@ export default function DashboardLoyout({
         <Link href="/" className="">
           <h1 className="font-semibold text-xl">Super Brain</h1>
         </Link>
+        <Sidebar />
       </div>
       <main className="md:pl-60">
         <Navbar />

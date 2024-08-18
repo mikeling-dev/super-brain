@@ -6,6 +6,8 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { useTheme } from "next-themes";
 import { dark } from "@clerk/themes";
+import { ErrorBoundary } from "next/dist/client/components/error-boundary";
+import Error from "./not-found";
 
 const fontSans = FontSans({
   subsets: ["latin"],
