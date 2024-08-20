@@ -12,9 +12,9 @@ export default function Heading({
   icon: Icon,
 }: HeadingProps) {
   return (
-    <div className="flex flex-row p-4 md:p-10 gap-5 items-center">
+    <div className="flex flex-row p-6 md:p-10 gap-5 items-center">
       <div className="bg-accent p-2 rounded-md">
-        <Icon className="w-10 h-10" />
+        <Icon className="w-8 h-8" />
       </div>
       <div>
         <p className="text-xl font-bold">{title}</p>
